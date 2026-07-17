@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #dd851f;
+    /*centralizar verticalmente todos os elementos do header*/
+    align-content: center;
+    /*centralizar horizontalmente todos os elementos do header*/
+    justify-content: center;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.logo img {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    border: 1px #583308 solid;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 20px;
+
+}
+
+.header .texto_delicias p {
+    font-family: 'Baloo 2', sans-serif;
+    color: #4c2c07;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+
+.header .texto_mineira p {
+    font-family: 'Caveat', cursive;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -15px;
+    margin-bottom: 0px;
+}
+
+.header .descricao p {
+    font-family: 'Nunito', sans-serif;
+    color: #4c2c07;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+.info-strip {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    background: #4A2E1E;
+    color: #FBF3E7;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #7CCB6E;
+    display: inline-block;
+    margin-right: 5px;
+    box-shadow: 0 0 0 2px rgba(124, 203, 110, .25);
+}
+
+.header .div-tracejada {
+    width: 100%;
+}
+
+.header .div-tracejada svg {
+    display: block;
+}

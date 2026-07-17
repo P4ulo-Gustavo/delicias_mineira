@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteEngine On
+
+# 1. Ignorar arquivos e diretórios reais
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 2. Direcionar todo o resto para index.php
+RewriteRule ^ index.php [L]
