@@ -21,9 +21,15 @@ class HomeController
             'status_abertura' => 'Aberto agora!',
         ]);
 
+        $categorias = View::render('categorias_produtos');
+
+        $produtos = View::render('main_produtos');
+
         //retorna o conteúdo da view home
         return new Response(200, View::render('home', [
-            'header' => $header
+            'header' => $header,
+            'categorias' => $categorias,
+            'produtos' => $produtos
         ]));
     }
 }

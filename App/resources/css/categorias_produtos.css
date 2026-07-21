@@ -1,0 +1,64 @@
+.categorias-section {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+}
+
+.categorias-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    border-bottom: 1px solid #4A2E1E;
+}
+
+.categorias-section .container ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 12px 0 12px 0;
+    padding: 0;
+}
+
+.categorias-section .container ul li button {
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Nunito';
+    font-weight: 700;
+    color: #4A2E1E;
+    padding: 12px 30px;
+    border: 1px solid #4A2E1E;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.categorias-section .container ul li button:hover {
+    background-color: #4A2E1E;
+    color: #ffffff;
+    text-decoration: bold;
+}
+
+.categorias-section .container ul li button.ativo {
+    background-color: #4A2E1E;
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: bold;
+}
+
+@media (max-width: 768px) {
+
+    /* Ajusta o container para permitir o scroll natural a partir da esquerda */
+    .categorias-section .container {
+        justify-content: flex-start;
+    }
+
+    /* Adiciona um respiro nas laterais da lista para o scroll não colar nas bordas */
+    .categorias-section .container ul {
+        padding: 0 20px;
+        margin-left: 0;
+    }
+}

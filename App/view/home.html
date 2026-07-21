@@ -5,16 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/resources/css/home.css">
+    <link rel="stylesheet" href="/resources/css/categorias_produtos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/resources/css/home.css">
+    <link rel="stylesheet" href="/resources/css/main_produtos.css">
     <title>Delicias Mineira</title>
 </head>
 
 <body>
-    {{header}}
+    <div class="container-header">
+        {{header}}
+    </div>
+
+    <div class="container-section">
+        <div class="container-categorias">
+            {{categorias}}
+        </div>
+        <div class="container-produtos">
+            {{produtos}}
+        </div>
+    </div>
+
+    <script src="/resources/js/categoria_produtos.js"></script>
 </body>
 
 </html>
