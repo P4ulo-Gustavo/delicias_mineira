@@ -6,6 +6,14 @@
     align-items: center;
 }
 
+.container-main-produtos h1 {
+    margin: 0;
+    padding: 10px 0;
+    left: 0;
+    color: #dd851f;
+    font-size: 20px;
+}
+
 .itens {
     width: 100%;
     display: flex;
@@ -13,7 +21,6 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: aqua;
 }
 
 .list-itens {
@@ -37,59 +44,123 @@
 
 .list-itens li button {
     width: 100%;
-    height: 100px;
+    min-height: 100px;
+    height: auto;
+    padding: 10px 12px 10px 0;
+    box-sizing: border-box;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    border: 1px solid #dd851f;
     border-radius: 25px;
-    gap: 5px;
+    gap: 10px;
+    background-color: white;
+    text-align: left;
+}
+.list-itens li button:hover {
+    cursor: pointer;
 }
 
+/* imagem: tamanho fixo mas nunca encolhe/estica de forma estranha */
+.box-img {
+    flex-shrink: 0;
+}
+
+.box-img img {
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 25%;
+    object-fit: cover;
+    display: block;
+}
+
+/* coluna com nome+preço em cima e descrição embaixo, ambos alinhados à esquerda */
+.box-flex-info {
+    flex: 1;
+    min-width: 0; /* permite que o texto quebre/trunque dentro do flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+}
+
+/* nome e preço na mesma linha, preço "empurrado" para o canto direito */
 .box-info {
     width: 100%;
     display: flex;
-    align-items: center;
-    align-items: center;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
 }
 
 .box-info .name-product {
-    justify-content: flex-start;
-    width: 80%;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.name-product h4 {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .box-info .price {
-    justify-content: flex-end;
-    width: 20%;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.price {
+    color: #539322;
+    font-weight: bold;
+}
+
+.price h4 {
+    margin: 0;
 }
 
 .description {
     width: 100%;
-    display: flex;
-    margin-left: 5%;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
 }
 
-.price {
-    margin-right: 5%;
-    color: #ba4e24;
-}
-
-.box-flex-info {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.box-img img {
+.description p {
     margin: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .name-product h4,
+    .price h4 {
+        font-size: 15px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box-img img {
+        width: 56px;
+        height: 56px;
+        margin-left: 6px;
+    }
+
+    .list-itens li button {
+        min-height: 80px;
+        gap: 6px;
+        padding: 8px 8px 8px 0;
+    }
+
+    .name-product h4,
+    .price h4 {
+        font-size: 13px;
+    }
+
+    .description {
+        font-size: 11px;
+    }
 }

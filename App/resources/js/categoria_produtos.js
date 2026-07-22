@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const categorias = document.querySelectorAll('.btn-categoria');
 
+    //O primeiro botão de categoria é marcado como ativo por padrão
+    if (categorias.length > 0) {
+        categorias[0].classList.add('ativo');
+    }
+
 
     //COLOCANDO A CLASSE ATIVO NA CATEGORIA CLICADA E REMOVENDO DOS OUTROS
     categorias.forEach(categoria => {

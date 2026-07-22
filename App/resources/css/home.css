@@ -26,6 +26,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .container-produtos {
@@ -38,7 +39,7 @@ body {
 
 @media (max-width: 768px) {
     .container-produtos {
-        width: 100%;
+        width: 95%;
         display: flex;
         flex-direction: column;
         justify-content: center;

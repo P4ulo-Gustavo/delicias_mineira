@@ -23,7 +23,9 @@ class HomeController
 
         $categorias = View::render('categorias_produtos');
 
-        $produtos = View::render('main_produtos');
+        $produtos = View::render('main_produtos', [
+            'categoria' => 'Refeições',
+        ]);
 
         //retorna o conteúdo da view home
         return new Response(200, View::render('home', [
